@@ -1,0 +1,62 @@
+:root,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: #f0f2f5;
+}
+
+.app-layout {
+  min-height: 100vh;
+  background: transparent;
+}
+
+.app-content {
+  display: flex;
+  flex: 1;
+  gap: 16px;
+  padding: 24px;
+}
+
+.panel {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.panel-card {
+  width: 100%;
+}
+
+.builder-panel {
+  flex: 0 0 40%;
+  min-width: 280px;
+}
+
+.preview-panel {
+  flex: 1;
+}
+
+.preview-control {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+@media (max-width: 1080px) {
+  .app-content {
+    flex-direction: column;
+  }
+
+  .builder-panel {
+    flex: 1;
+  }
+}
