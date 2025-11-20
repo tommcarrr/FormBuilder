@@ -9,6 +9,7 @@ const { Content } = Layout;
 
 export default function App(): JSX.Element {
   const [formDefinition, setFormDefinition] = useState<FormDefinition>(createDefaultFormDefinition);
+  const [selectedElementId, setSelectedElementId] = useState<string | null>(null);
 
   return (
     <Layout className="app-layout">
@@ -16,6 +17,8 @@ export default function App(): JSX.Element {
         <section className="panel builder-panel" aria-label="Form builder">
           <FormBuilderPanel
             formDefinition={formDefinition}
+            selectedElementId={selectedElementId}
+            onSelectElement={setSelectedElementId}
             onFormDefinitionChange={setFormDefinition}
           />
         </section>
